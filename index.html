@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heimby Tools</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5f8ff;
+            --hover-color: #3a7bc8;
+            --text-color: #333;
+            --light-text: #666;
+            --card-border: #ddd;
+            --background: #f9f9f9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .description {
+            color: var(--light-text);
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 1.1rem;
+        }
+
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .tool-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--card-border);
+            text-decoration: none;
+            color: var(--text-color);
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .tool-icon {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+
+        .tool-icon svg {
+            width: 80px;
+            height: 80px;
+        }
+
+        .tool-details {
+            padding: 20px;
+        }
+
+        .tool-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+
+        .tool-description {
+            color: var(--light-text);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .tool-badge {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .github-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .github-link:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .tools-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            header {
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tools-container {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                padding: 15px;
+            }
+
+            .tool-icon {
+                height: 120px;
+            }
+
+            .tool-icon svg {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Heimby Tools</h1>
+        <p class="description">
+            A collection of simple, useful tools to automate tedious tasks and improve your workflow.
+        </p>
+    </header>
+
+    <div class="tools-container">
+        <!-- Guesty Image Resizer -->
+        <a href="Guesty-image-resizer.html" class="tool-card">
+            <div class="tool-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+            </div>
+            <div class="tool-details">
+                <h3 class="tool-title">Guesty Image Resizer</h3>
+                <p class="tool-description">
+                    Automatically resize and compress your property images to meet Guesty and Airbnb requirements.
+                </p>
+                <span class="tool-badge">Image Processing</span>
+            </div>
+        </a>
+
+        <!-- Placeholder for future tools -->
+        <div class="tool-card" style="opacity: 0.6; cursor: not-allowed;">
+            <div class="tool-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+            </div>
+            <div class="tool-details">
+                <h3 class="tool-title">Coming Soon</h3>
+                <p class="tool-description">
+                    More tools are under development. Check back later for updates.
+                </p>
+                <span class="tool-badge">Future Tool</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            &copy;
+            <script>document.write(new Date().getFullYear())</script> Heimby Tools. All rights reserved.
+            <br>
+            <a href="https://github.com/heimby-tools/heimby-tools" class="github-link">View on GitHub</a>
+        </p>
+    </footer>
+</body>
+
+</html>
